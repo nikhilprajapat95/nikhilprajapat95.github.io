@@ -506,10 +506,15 @@
       border-color: rgba(56,189,248,0.32);
     }
     .cert-img {
-      height: 130px;
+      height: 180px;
       display: flex; align-items: center; justify-content: center;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
-    .cert-img i { font-size: 2.4rem; }
+    .cert-img.cert-img-ds {
+      background-image: url('images/ds_cert.png');
+    }
     .cert-body { padding: 16px 18px 20px; }
     .cert-org {
       display: flex; align-items: center; gap: 8px; margin-bottom: 8px;
@@ -517,7 +522,12 @@
     .cert-org-logo {
       width: 26px; height: 26px; border-radius: 6px;
       display: flex; align-items: center; justify-content: center;
+      overflow: hidden;
       font-size: 0.6rem; font-weight: 800;
+    }
+    .cert-org-logo img {
+      width: 100%; height: 100%; object-fit: contain;
+      display: block;
     }
     .cert-org-name { font-size: 0.78rem; color: var(--text-muted); font-weight: 600; }
     .cert-title {
@@ -1140,34 +1150,39 @@
 
         <!-- Udemy Bootcamp -->
         <div class="cert-card fade-in">
-          <div class="cert-img"
-               style="background: linear-gradient(135deg, #1c1400, #2d2000);">
-            <i class="fas fa-certificate" style="color:#facc15;"></i>
-          </div>
+          <div class="cert-img cert-img-ds"></div>
           <div class="cert-body">
             <div class="cert-org">
-              <div class="cert-org-logo"
-                   style="background:rgba(250,204,21,0.15);border:1px solid rgba(250,204,21,0.3);color:#facc15;">
-                U
+              <div class="cert-org-logo" style="background:rgba(250,204,21,0.15);border:1px solid rgba(250,204,21,0.3);">
+                <img src="technical skills/udemy.png" alt="Udemy logo">
               </div>
               <span class="cert-org-name">Udemy</span>
             </div>
             <div class="cert-title">
               Complete Data Science, Machine Learning, Deep Learning &amp; NLP Bootcamp
             </div>
-            <a href="#" class="cert-arrow" target="_blank" rel="noopener">
+            <a href="https://www.udemy.com/certificate/UC-aa958e36-5a9b-4530-8cc8-8ac53c4c7ba4/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com" class="cert-arrow" target="_blank" rel="noopener">
               View Certificate <i class="fas fa-arrow-right"></i>
             </a>
           </div>
         </div>
 
-        <!-- Placeholder 2 -->
-        <div class="cert-card cert-placeholder fade-in" style="transition-delay:0.1s;">
-          <div class="cert-img" style="background:#0d1525;">
-            <i class="fas fa-plus-circle" style="color:#334155; font-size:2rem;"></i>
-          </div>
+        <!-- ISRO Certificate -->
+        <div class="cert-card fade-in">
+          <div class="cert-img" style="background-image: url('images/isro_cert.png');"></div>
           <div class="cert-body">
-            <div class="cert-title" style="color:var(--text-dim);">More certifications coming soon...</div>
+            <div class="cert-org">
+              <div class="cert-org-logo" style="background:rgba(250,204,21,0.15);border:1px solid rgba(250,204,21,0.3);">
+                <img src="technical skills/isro.png" alt="ISRO logo">
+              </div>
+              <span class="cert-org-name">IIRS, ISRO</span>
+            </div>
+            <div class="cert-title">
+              Geodata Processing using Python and Machine Learning 
+            </div>
+            <a href="https://isrolms.iirs.gov.in/mod/customcert/verify_certificate.php?contextid=1049408" class="cert-arrow" target="_blank" rel="noopener">
+              View Certificate <i class="fas fa-arrow-right"></i>
+            </a>
           </div>
         </div>
 
